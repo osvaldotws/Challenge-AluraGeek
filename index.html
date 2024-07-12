@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>AluraGeek - Tu Tienda de Productos Geek</title>
+    <meta name="description"
+        content="Descubre productos únicos para los amantes de la cultura geek en AluraGeek. Desde figuras coleccionables hasta consolas retro, tenemos todo lo que buscas.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="./img/logo.webp" alt="Logo de AluraGeek" width="180" height="50" fetchpriority="high"
+                    decoding="async">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#productos"><i class="fas fa-store"></i> Productos</a></li>
+                    <li><a href="#agregar-producto"><i class="fas fa-plus-circle"></i> Agregar Producto</a></li>
+                    <li><a href="#about"><i class="fas fa-info-circle"></i> Sobre Nosotros</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="search" placeholder="Buscar producto..." aria-label="Buscar productos">
+                <button type="submit" aria-label="Realizar búsqueda">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <button id="dark-mode-toggle" aria-label="Cambiar modo oscuro">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="section hero">
+            <div class="container">
+                <h1>Bienvenido a Comunidad de Negocios</h1>
+                <p>Explora nuestra colección de productos geek únicos y emocionantes</p>
+                <a href="#productos" class="cta-button">Ver Productos</a>
+            </div>
+        </section>
+
+        <section id="productos" class="products-section">
+            <div class="container">
+                <h2><i class="fas fa-tags"></i> Nuestros Productos</h2>
+                <div class="products-grid" aria-label="Lista de productos">
+                    <!-- Los productos se generarán dinámicamente aquí -->
+                </div>
+            </div>
+        </section>
+
+        <section id="agregar-producto" class="add-product-section">
+            <div class="container">
+                <h2><i class="fas fa-plus-circle"></i> Agregar Nuevo Producto</h2>
+                <form id="add-product-form" class="add-product-form">
+                    <div class="form-group">
+                        <label for="product-name"><i class="fas fa-signature"></i> Nombre del Producto</label>
+                        <input type="text" id="product-name" name="product-name" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="product-price"><i class="fas fa-tag"></i> Precio</label>
+                        <input type="number" id="product-price" name="product-price" min="0" step="0.01" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="product-category"><i class="fas fa-folder"></i> Categoría</label>
+                        <select id="product-category" name="product-category" required="">
+                            <option value="">Selecciona una categoría</option>
+                            <option value="figuras">Figuras Coleccionables</option>
+                            <option value="consolas">Consolas</option>
+                            <option value="ropa">Ropa Geek</option>
+                            <option value="accesorios">Accesorios</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-description"><i class="fas fa-align-left"></i> Descripción</label>
+                        <textarea id="product-description" name="product-description" rows="4" required=""></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-image"><i class="fas fa-image"></i> Imagen del Producto</label>
+                        <input type="file" id="product-image" name="product-image" accept="image/*">
+                    </div>
+                    <div class="form-group">
+                        <label for="product-image-url"><i class="fas fa-image"></i>O ingresa la URL de la imagen</label>
+                        <input type="url" id="product-image-url" placeholder="https://ejemplo.com/imagen.jpg">
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-plus"></i> Agregar
+                            Producto</button>
+                        <button type="reset" class="btn btn-secondary"><i class="fas fa-undo"></i> Limpiar
+                            Formulario</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2><i class="fas fa-info-circle"></i> Sobre AluraGeek</h2>
+                <p>AluraGeek es tu destino para todos los productos geek que puedas imaginar. Fundada por entusiastas de
+                    la cultura pop, nos dedicamos a traerte los artículos más cool y coleccionables del mercado.</p>
+                <ul class="features-list">
+                    <li><i class="fas fa-check"></i> Amplia selección de productos</li>
+                    <li><i class="fas fa-truck"></i> Envíos rápidos y seguros</li>
+                    <li><i class="fas fa-headset"></i> Atención al cliente 24/7</li>
+                    <li><i class="fas fa-certificate"></i> Garantía de autenticidad en todos nuestros productos</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="./img/logo.webp" alt="Logo de AluraGeek" width="120" height="40" fetchpriority="high"
+                        decoding="async">
+                </div>
+                <nav class="footer-nav">
+                    <h3><i class="fas fa-link"></i> Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#productos"><i class="fas fa-store"></i> Productos</a></li>
+                        <li><a href="#agregar-producto"><i class="fas fa-plus-circle"></i> Agregar Producto</a></li>
+                        <li><a href="#about"><i class="fas fa-info-circle"></i> Sobre Nosotros</a></li>
+                        <li><a href="/politica-privacidad"><i class="fas fa-shield-alt"></i> Política de Privacidad</a>
+                        </li>
+                        <li><a href="/terminos-servicio"><i class="fas fa-file-contract"></i> Términos de Servicio</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="newsletter-signup">
+                    <h3><i class="fas fa-envelope"></i> Suscríbete a nuestro newsletter</h3>
+                    <form id="newsletter-form" class="newsletter-form">
+                        <input type="email" placeholder="Tu correo electrónico" required="">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+                <div class="social-media">
+                    <h3><i class="fas fa-share-alt"></i> Síguenos</h3>
+                    <ul class="social-links">
+                        <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2024 AluraGeek. Todos los derechos reservados. Desarrollado por Osvaldo Paz</p>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/main.js" defer=""></script>
+
+
+</body>
+
+</html>
